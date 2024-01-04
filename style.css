@@ -1,0 +1,272 @@
+/* --- GLOBAL SETTINGS --- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+li {
+  background-color: white;
+  display: inline;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(42, 188, 199);
+}
+
+a:visited {
+  color: rgb(152, 152, 214);
+}
+
+a:hover {
+  color: rgb(231, 128, 173);
+}
+
+a:active {
+  color: rgb(131, 212, 162);
+}
+
+.footer1 {
+ 
+  box-shadow: none;
+  outline: none;
+  border: solid;
+  font-size: 20px;
+  border-radius: 60px;
+  background-color: rgb(235, 239, 243);
+  border-color: rgb(201, 194, 194);
+  padding: 15px;
+}
+
+img:hover{
+  filter: brightness(75%);
+  transition: all 0.25s ease-in-out;
+}
+
+/* --- END GLOBAL SETTINGS --- */
+
+/* --- GRID  --- */
+
+.container {
+  width: 100vw;
+  height: 100vw;
+  background-color: white;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  grid-template-rows: 120px 20% 20% 120px;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+  /* SHORT VERSION OF ABOVE 2 LINES
+  grid-template: 50px 1fr 1fr 100px / repeat (3, 1fr); */
+  box-sizing: border-box;
+}
+
+.container div {
+  padding: 0px;
+  border: solid white;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.content-photo1 {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.content-photo2 {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.content-photo3 {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.content-photo4 {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.footer {
+  grid-column: 1 / span 4;
+  /* short version */
+}
+
+img {
+ max-width: 100%;
+}
+
+/* --- END GRID --- */
+
+/* --- HEADER --- */
+
+.header {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.navbox {
+  background-color: white;
+  position: absolute;
+  /* parent in flexbox */
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar_menu {
+  background-color: white;
+  /* child in flexbox */
+  width: 100%;
+  padding: 0; 
+  /* need above padding otherwise home link moves around */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo_container {
+  /* display: inline-flex; justify-self: center;
+  align-items: center;
+  align-content: center; */
+  position: absolute;
+   /* child in flexbox */
+  display: flex;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo_container {
+    font-size: 35px; 
+  }
+}
+
+.logo {
+  justify-self: center;
+  text-justify: center;
+}
+
+.logo_container {
+  a:link {
+    color: rgb(152, 152, 214);
+  }
+  
+  a:visited {
+    color: rgb(42, 188, 199);
+  }
+  
+  a:hover {
+    color: rgb(231, 128, 173);
+  }
+  
+  a:active {
+    color: rgb(131, 212, 162);
+  }
+}
+
+.footer {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_box {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 50px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .container {
+    background-color: white;
+    grid-template-columns: 17% 33% 33% 17%;
+    grid-template-rows: 17% 33% 33% 17%;
+  }
+}
+
+/* --- END OF HOME PAGE --- */
+
+/* --- BEGIN CONTACT PAGE --- */
+
+.contact_box {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+/*  Note: contact box used for contact page and also quote page and read about page  */
+.contact_box {
+  width: 100%;
+  background-color: white;
+  font-size: 70px;
+  font-family: 'Sacramento', cursive;
+  color: rgb(19, 19, 85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-justify: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .contact_box {
+    background-color: white;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact_box {
+    background-color: white;
+    font-size: 25px;
+  }
+}
+
+/* Please don't mess with the code anymore future Sapna, call it a day! */
