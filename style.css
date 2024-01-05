@@ -172,18 +172,13 @@ img {
   font-size: 60px;
 }
 
-@media screen and (max-width: 600px) {
-  .logo_container {
-    font-size: 35px; 
-  }
-}
-
 .logo {
   justify-self: center;
   text-justify: center;
 }
 
 .logo_container {
+
   a:link {
     color: rgb(152, 152, 214);
   }
@@ -219,7 +214,6 @@ img {
   align-content: center;
   margin: 50px;
 }
-
 
 @media screen and (max-width: 800px) {
   .container {
@@ -266,6 +260,27 @@ img {
   .contact_box {
     background-color: white;
     font-size: 25px;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  .footer1 {
+    padding: 10px;
+  }
+  
+  .footer {
+    margin-top: 30px;
+  }
+
+  .navbar_menu {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .footer_box  {
+    margin: 25px;
   }
 }
 
